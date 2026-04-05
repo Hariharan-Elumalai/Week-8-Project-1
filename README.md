@@ -29,7 +29,4 @@ cd Counter-Application
 npm install
 npm start
 ```
-
-## Author
-
-Project by [vignesh](https://github.com/Vixcy300)
+Hari
