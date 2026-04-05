@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import RandomNumberGenerator from './Random';
+import './index.css';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // 🔥 Apply dark class to BODY
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="app-container">
+
+      <div className="generator-card">
+
+        <button
+          className="toggle-btn inside"
+          onClick={() => setDarkMode(!darkMode)}
         >
-          Learn React
-        </a>
-      </header>
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+
+        <RandomNumberGenerator />
+
+      </div>
+
     </div>
   );
 }

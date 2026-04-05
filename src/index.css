@@ -1,13 +1,117 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.3s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 🌙 DARK MODE */
+body.dark {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+/* Container */
+.app-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.generator-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* DARK CARD */
+body.dark .generator-card {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+/* Title */
+.title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Number box */
+.number-display {
+  margin: 30px 0;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #e5e7eb;
+  border-radius: 12px;
+}
+
+/* DARK box */
+body.dark .number-display {
+  border-color: #374151;
+}
+
+/* Number */
+.random-number {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+/* Placeholder */
+.placeholder-text {
+  color: #9ca3af;
+}
+
+/* DARK placeholder */
+body.dark .placeholder-text {
+  color: #d1d5db;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* 🟢 GREEN Generate button */
+.generate-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.generate-btn:hover {
+  background: #16a34a;
+}
+
+/* Reset */
+.reset-btn {
+  background: #e5e7eb;
+}
+
+/* Toggle button */
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }

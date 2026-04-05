@@ -1,38 +1,82 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: 0.3s;
+}
+
+/* Light Mode */
+.app-container {
+  background: #f9fafb;
+  color: #111827;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark Mode */
+.app-container.dark {
+  background: #111827;
+  color: #ffffff;
+}
+
+/* Card */
+.generator-card {
+  position: relative;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Dark card */
+.app-container.dark .generator-card {
+  background: #1f2937;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Title */
+.title {
+  color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Number */
+.random-number {
+  font-size: 60px;
+  color: inherit;
+}
+
+/* Display box */
+.number-display {
+  margin: 20px 0;
+  padding: 30px;
+  border: 2px dashed gray;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* GREEN Generate */
+.generate-btn {
+  background: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Reset */
+.reset-btn {
+  background: lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Toggle button */
+.toggle-btn.inside {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
