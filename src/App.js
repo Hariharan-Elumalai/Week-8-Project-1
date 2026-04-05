@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './index.css';
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,18 +36,6 @@ function App() {
         </div>
 
         {count === 0 && <p className="message">Minimum limit reached</p>}
-
-        <p className="credit-text">
-          Project by{' '}
-          <a
-            className="credit-link"
-            href="https://github.com/Vixcy300"
-            target="_blank"
-            rel="noreferrer"
-          >
-            vignesh
-          </a>
-        </p>
       </div>
     </div>
   );
