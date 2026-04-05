@@ -1,37 +1,35 @@
-# 🎲 Random Number Generator
+# Counter Application
 
-A simple React app to generate random numbers.
+A simple React Counter Application built using the `useState` hook.
 
----
+## Objective
 
-## 🚀 Features
+Understand state management in React by building a counter with dynamic UI updates.
 
-* Generate random number
-* Reset option
-* Dark / Light mode
+## Features
 
----
+- Increment count by 1
+- Decrement count by 1
+- Reset count to 0
+- Prevent decrement below zero
+- Show `Minimum limit reached` when count is zero
+- Clean and responsive UI with basic styling
 
-## 🛠️ Tech Used
+## Tech Stack
 
-* React
-* JavaScript
-* CSS
+- React
+- JavaScript
+- CSS
 
----
-
-## ▶️ Run Project
+## Run Locally
 
 ```bash
-git clone https://github.com/thiruppathi55/Random-Number.git
-cd myapp
+git clone https://github.com/Vixcy300/Counter-Application.git
+cd Counter-Application
 npm install
 npm start
 ```
 
----
+## Author
 
-## 👨‍💻 Author
-
-Thiruppathi
-https://github.com/thiruppathi55
+Project by [vignesh](https://github.com/Vixcy300)

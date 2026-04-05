@@ -1,35 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import RandomNumberGenerator from './Random';
+import React, { useState } from 'react';
 import './index.css';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [count, setCount] = useState(0);
 
-  // 🔥 Apply dark class to BODY
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
-  }, [darkMode]);
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const handleDecrement = () => {
+    setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
+  };
+
+  const handleReset = () => {
+    setCount(0);
+  };
 
   return (
     <div className="app-container">
+      <div className="counter-card">
+        <h1 className="title">Counter Application</h1>
 
-      <div className="generator-card">
+        <p className="count-value">{count}</p>
 
-        <button
-          className="toggle-btn inside"
-          onClick={() => setDarkMode(!darkMode)}
-        >
-          {darkMode ? "☀️" : "🌙"}
-        </button>
+        <div className="button-row">
+          <button className="btn" onClick={handleIncrement}>
+            Increment
+          </button>
+          <button className="btn" onClick={handleDecrement} disabled={count === 0}>
+            Decrement
+          </button>
+          <button className="btn reset-btn" onClick={handleReset}>
+            Reset
+          </button>
+        </div>
 
-        <RandomNumberGenerator />
+        {count === 0 && <p className="message">Minimum limit reached</p>}
 
+        <p className="credit-text">
+          Project by{' '}
+          <a
+            className="credit-link"
+            href="https://github.com/Vixcy300"
+            target="_blank"
+            rel="noreferrer"
+          >
+            vignesh
+          </a>
+        </p>
       </div>
-
     </div>
   );
 }

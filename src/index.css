@@ -1,117 +1,94 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f9fafb;
-  color: #111827;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  transition: 0.3s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 🌙 DARK MODE */
-body.dark {
-  background-color: #111827;
-  color: #ffffff;
-}
-
-/* Container */
 .app-container {
-  width: 100%;
+  min-height: 100vh;
+  background: #f4f6fb;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 16px;
 }
 
-/* Card */
-.generator-card {
-  position: relative;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 40px 30px;
+.counter-card {
   width: 100%;
   max-width: 380px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: 0.3s;
 }
 
-/* DARK CARD */
-body.dark .generator-card {
-  background: #1f2937;
-  color: #ffffff;
-}
-
-/* Title */
 .title {
-  font-size: 22px;
-  margin-bottom: 20px;
+  margin: 0;
+  font-size: 28px;
+  color: #111827;
 }
 
-/* Number box */
-.number-display {
-  margin: 30px 0;
-  min-height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px dashed #e5e7eb;
-  border-radius: 12px;
-}
-
-/* DARK box */
-body.dark .number-display {
-  border-color: #374151;
-}
-
-/* Number */
-.random-number {
-  font-size: 72px;
+.count-value {
+  margin: 20px 0;
+  font-size: 64px;
   font-weight: 700;
+  color: #1d4ed8;
 }
 
-/* Placeholder */
-.placeholder-text {
-  color: #9ca3af;
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* DARK placeholder */
-body.dark .placeholder-text {
-  color: #d1d5db;
-}
-
-/* Buttons */
 .btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: 8px;
+  min-width: 100px;
+  padding: 10px 14px;
   border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background-color 0.2s ease;
 }
 
-/* 🟢 GREEN Generate button */
-.generate-btn {
-  background: #22c55e;
-  color: white;
+.btn:hover:not(:disabled) {
+  background: #1d4ed8;
 }
 
-.generate-btn:hover {
-  background: #16a34a;
-}
-
-/* Reset */
 .reset-btn {
-  background: #e5e7eb;
+  background: #475569;
 }
 
-/* Toggle button */
-.toggle-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border: none;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
+.reset-btn:hover:not(:disabled) {
+  background: #334155;
+}
+
+.btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 16px;
+  color: #b45309;
+  font-weight: 600;
+}
+
+.credit-text {
+  margin: 14px 0 0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.credit-link {
+  color: #0f766e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.credit-link:hover {
+  text-decoration: underline;
 }
